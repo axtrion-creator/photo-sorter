@@ -71,7 +71,7 @@ def process(src: Path, dst: Path, move=False, recursive=True, dry=False):
         outdir = (dst / y_m_folder(dt))
         outdir.mkdir(parents=True, exist_ok=True)
 
-        newname = f"{dt.strftime('%Y%m%d_%H%M%S')}{p.suffix.lower()}"
+        newname = f"{dt.strftime('%Y%m%d_%H%M%S')}_saulisphone{p.suffix.lower()}"
         target = next_free(outdir / newname)
 
         action = "MOVE" if move else "COPY"
